@@ -11,6 +11,11 @@
 
 <a name="descripton"></a>
 ## Project Definition
+The algorithm is trained on a dataset of over 50,000 disaster response messages. It is able to classify messages into 36 categories, including needs, safety, aid etc.
+
+The Flask application makes it easy to use the algorithm. Simply type messages to the application, and it will generate a classification report. The report includes the category for each message.
+
+Disaster Response Pipeline is a valuable tool for emergency responders and humanitarian organizations. It can help to quickly and efficiently identify the needs of people affected by a disaster.
 
 <a name="getting_started"></a>
 ## What to Do to Run
