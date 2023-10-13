@@ -27,19 +27,14 @@ Disaster Response Pipeline is a valuable tool for emergency responders and human
 [re — Regular expression operations](https://docs.python.org/3/library/re.html)
 [Numpy](https://numpy.org/install/)
 [Pandas]((https://pandas.pydata.org/)
-[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
-[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
-[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
-[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
-re
-numpy
-pandas
-nltk
-sklearn
-sqlalchemy
-pickle
-Flask
-Plotly
+[Natural Language Toolkit]((https://www.nltk.org/)
+[scikit-learn - Machine Learning in Python](https://scikit-learn.org/)
+[SQLAlchemy - the Python SQL toolkit](https://www.sqlalchemy.org/)
+[Pickle — Python object serialization](https://docs.python.org/3/library/pickle.html)
+[Flask](https://flask.palletsprojects.com/en/3.0.x/)
+[Plotly](https://plotly.com/)
+
+
 <a name="installation"></a>
 ### Installation
 
