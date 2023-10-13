@@ -38,7 +38,15 @@ Disaster Response Pipeline is a valuable tool for emergency responders and human
 
 <a name="installation"></a>
 ### Installation
+To install this project, follow these steps:
 
+1. Clone the repository:
+git clone https://github.com/your_username/project_name.git
+2. Install dependencies:
+cd project_name
+npm install
+Start the project:
+npm start
 <a name="execution"></a>
 ### Running Scripts
 
