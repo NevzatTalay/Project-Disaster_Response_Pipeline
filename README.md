@@ -32,7 +32,7 @@ Disaster Response Pipeline is a valuable tool for emergency responders and human
 [SQLAlchemy - the Python SQL toolkit](https://www.sqlalchemy.org/)\
 [Pickle — Python object serialization](https://docs.python.org/3/library/pickle.html)\
 [Flask](https://flask.palletsprojects.com/en/3.0.x/)\
-[Plotly](https://plotly.com/)\
+[Plotly](https://plotly.com/)
 
 
 
