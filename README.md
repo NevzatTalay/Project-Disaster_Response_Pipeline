@@ -23,6 +23,23 @@ Disaster Response Pipeline is a valuable tool for emergency responders and human
 <a name="dependencies"></a>
 ### Required Libraries
 
+[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
+[re — Regular expression operations](https://docs.python.org/3/library/re.html)
+[Numpy](https://numpy.org/install/)
+[Pandas]((https://pandas.pydata.org/)
+[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
+[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
+[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
+[sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html)
+re
+numpy
+pandas
+nltk
+sklearn
+sqlalchemy
+pickle
+Flask
+Plotly
 <a name="installation"></a>
 ### Installation
 
