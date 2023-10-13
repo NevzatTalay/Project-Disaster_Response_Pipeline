@@ -1,13 +1,31 @@
 # Disaster Response Pipeline Project (Udacity - Data Science Nanodegree)
 
 ## Table of Contents
-1. [Description](#description)
-2. [Getting Started](#getting_started)
-	1. [Dependencies](#dependencies)
-	2. [Installing](#installation)
-	3. [Executing Program](#execution)
-	4. [Additional Material](#material)
-3. [Authors](#authors)
-4. [License](#license)
-5. [Acknowledgement](#acknowledgement)
-6. [Screenshots](#screenshots)
+1. [Project Definition](#description)
+2. [What to Do to Run](#getting_started)
+	1. [Required Libraries](#dependencies)
+	2. [Installation](#installation)
+	3. [Running Scripts](#execution)
+3. [License](#license)
+4. [Acknowledgement](#acknowledgement)
+
+<a name="descripton"></a>
+## Project Definition
+
+<a name="getting_started"></a>
+## What to Do to Run
+
+<a name="dependencies"></a>
+### Required Libraries
+
+<a name="installation"></a>
+### Installation
+
+<a name="execution"></a>
+### Running Scripts
+
+<a name="license"></a>
+## License
+
+<a name="acknowledgement"></a>
+## Acknowledgement
