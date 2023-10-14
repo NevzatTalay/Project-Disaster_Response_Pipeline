@@ -34,19 +34,49 @@ Disaster Response Pipeline is a valuable tool for emergency responders and human
 * [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 * [Plotly](https://plotly.com/)
 
-
+```
+import re                                                                                    
+import numpy as np                                                                           
+import pandas as pd                                                                         
+from nltk.tokenize import word_tokenize                                                      
+from nltk.stem import WordNetLemmatizer                                                  
+import nltk                                                                           
+import pickle                                                                       
+from sklearn.model_selection import GridSearchCV                                        
+from sklearn.ensemble import RandomForestClassifier                                      
+from sklearn.model_selection import train_test_split                                   
+from sklearn.pipeline import Pipeline, FeatureUnion                                  
+from sklearn.base import BaseEstimator, TransformerMixin                              
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer          
+from sklearn.metrics import classification_report                                         
+from sqlalchemy import create_engine                                                     
+from sklearn.multioutput import MultiOutputClassifier                                    
+from sklearn.neighbors import KNeighborsClassifier                                    
+from sklearn.metrics import  f1_score,precision_score,recall_score,accuracy_score,make_scorer
+```
 
 <a name="installation"></a>
 ### Installation
 To install this project, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/your_username/project_name.git
+git clone https://github.com/NevzatTalay/Project-Disaster_Response_Pipeline.git
 2. Install dependencies:
-cd project_name
-npm install
-Start the project:
-npm start
+cd Project-Disaster_Response_Pipeline
+3. Run ETL Pipeline to get db file.
+```
+python process_data.py disaster_messages.csv disaster_categories.csv MessageDatabase.db
+```
+4. Run ML Pipeline to obtain pickle file.
+```
+python train_classifier.py ../data/DisasterResponse.db classifier.pkl
+```
+5. Run Flask Application and open in browser.
+```
+cd app
+python run.py
+```
+Open your browser and type https://0.0.0.0:3000/
 <a name="execution"></a>
 ### Running Scripts
 
