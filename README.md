@@ -5,6 +5,7 @@
 2. [What to Do to Run](#getting_started)
 	1. [Required Libraries](#dependencies)
 	2. [Installation and Running Scripts](#installation)
+ 	3. [Website and Graphs](#output)
 3. [License](#license)
 4. [Acknowledgement](#acknowledgement)
 
@@ -78,6 +79,12 @@ python run.py
 Open your browser and type https://0.0.0.0:3000/
 
 <a name="license"></a>
+<a name="output"></a>
+### Website and Graphs
+To be filled later.\\
+
+
+
 ## License
 MIT License
 
@@ -97,6 +104,6 @@ copies or substantial portions of the Software.
 ## Acknowledgement
 I would like to acknowledge the following parties for their contributions to this work:
 
-Figure-8, for making this dataset available to Udacity for training purposes.
-Udacity, for providing the training.
+* Figure-8, for making this dataset available to Udacity for training purposes.
+* Udacity, for providing the training.
 Please feel free to use the contents of this work, but please cite me, Udacity, and/or Figure-8 accordingly.
