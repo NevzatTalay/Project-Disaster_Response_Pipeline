@@ -81,9 +81,20 @@ Open your browser and type https://0.0.0.0:3000/
 <a name="license"></a>
 <a name="output"></a>
 ### Website and Graphs
-![alt text for screen readers](/resources/webpage view.png "General View of Web-Site")
+Here you can see the general view of the web-site. 
 <img src="resources/webpage view.png" alt="General View of Web-Site"/>
 
+If you type "There's a fire at the Perpetuel Secours Church. Please send firefighters." related categories will be:
+* Related
+* Request
+* Aid Related
+* Death
+* Other Aid
+* Infrastructure Related
+* Other Infrastructure
+* Weather Related
+* Fire
+<img src="resources/results view.png" alt="Results of Web-Site"/>
 
 ## License
 MIT License
