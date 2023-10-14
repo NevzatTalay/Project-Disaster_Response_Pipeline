@@ -4,8 +4,7 @@
 1. [Project Definition](#description)
 2. [What to Do to Run](#getting_started)
 	1. [Required Libraries](#dependencies)
-	2. [Installation](#installation)
-	3. [Running Scripts](#execution)
+	2. [Installation and Running Scripts](#installation)
 3. [License](#license)
 4. [Acknowledgement](#acknowledgement)
 
@@ -77,11 +76,10 @@ cd app
 python run.py
 ```
 Open your browser and type https://0.0.0.0:3000/
-<a name="execution"></a>
-### Running Scripts
 
 <a name="license"></a>
 ## License
+
 
 <a name="acknowledgement"></a>
 ## Acknowledgement
