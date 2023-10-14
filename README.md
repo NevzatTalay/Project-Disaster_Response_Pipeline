@@ -103,3 +103,8 @@ SOFTWARE.
 
 <a name="acknowledgement"></a>
 ## Acknowledgement
+I would like to acknowledge the following parties for their contributions to this work:
+
+Figure-8, for making this dataset available to Udacity for training purposes.
+Udacity, for providing the training.
+Please feel free to use the contents of this work, but please cite me, Udacity, and/or Figure-8 accordingly.
