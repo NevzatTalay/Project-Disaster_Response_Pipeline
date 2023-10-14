@@ -81,7 +81,7 @@ Open your browser and type https://0.0.0.0:3000/
 <a name="license"></a>
 <a name="output"></a>
 ### Website and Graphs
-To be filled later.\\
+![alt text for screen readers](/resources/webpage view.png "General View of Web-Site")
 
 
 
