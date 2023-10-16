@@ -5,6 +5,20 @@ import sqlite3
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+    """
+    Load and merge message and category data from CSV files to create a structured DataFrame.
+
+    This function reads two CSV files containing message and category data, processes the data,
+    and merges them to create a structured DataFrame with categories as columns.
+
+    Args:
+        messages_filepath (str): File path to the CSV file containing message data.
+        categories_filepath (str): File path to the CSV file containing category data.
+
+    Returns:
+        pandas.DataFrame: A DataFrame containing the merged data with each message's associated categories
+                         represented as individual columns.
+    """
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = pd.merge(messages, categories, on="id")
@@ -20,12 +34,39 @@ def load_data(messages_filepath, categories_filepath):
     return df
 
 def clean_data(df):
+    """
+    Clean and remove duplicate messages from a DataFrame.
+
+    This function identifies and removes duplicate messages in a given DataFrame, keeping only the
+    first occurrence of each unique message. It helps to ensure that the dataset contains only
+    unique messages, which is often necessary in data processing.
+
+    Args:
+        df (pandas.DataFrame): The DataFrame containing message data to be cleaned.
+
+    Returns:
+        pandas.DataFrame: A cleaned DataFrame with duplicate messages removed.
+    """
     df['message'].duplicated().sum()
     df = df.drop_duplicates(subset=['message'], keep='first')
     return df
 
 
 def save_data(df, database_filename):
+    """
+    Save a DataFrame to an SQLite database.
+
+    This function takes a pandas DataFrame and saves it to an SQLite database at the specified
+    database file path. The DataFrame is stored as a table named 'MessageDatabase2' within the
+    SQLite database.
+
+    Args:
+        df (pandas.DataFrame): The DataFrame to be saved to the database.
+        database_filename (str): The file path for the SQLite database where the DataFrame will be stored.
+
+    Returns:
+        None: The function does not return any values.
+    """
     engine = create_engine('sqlite:///' + database_filename)
     df.to_sql('MessageDatabase2', engine, index=False)  
 
