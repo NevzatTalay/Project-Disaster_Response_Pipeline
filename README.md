@@ -67,7 +67,7 @@ cd Project-Disaster_Response_Pipeline
 3. Unrar "/models/classifier.rar" as "models/classifier.pkl"
 4. Run ETL Pipeline to get db file.
 ```
-python process_data.py disaster_messages.csv disaster_categories.csv MessageDatabase.db
+python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
 ```
 4. Run ML Pipeline to obtain pickle file.
 ```
