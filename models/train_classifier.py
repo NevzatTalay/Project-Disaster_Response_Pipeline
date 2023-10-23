@@ -33,7 +33,8 @@ def load_data(database_filepath):
         category_names: A list of the category names in the Y DataFrame.
     """
     engine = create_engine('sqlite:///'+database_filepath)
-    df = pd.read_sql_table('MessageDatabase2', engine)  
+    table_name = database_filepath.split(".")[len(database_filepath.split("."))-2].lower().split("/")[-1]
+    df = pd.read_sql_table(table_name, engine)  
     X = df['message']
     Y = df.drop(['id','message','original','genre'],axis=1)
     category_names = Y.columns
