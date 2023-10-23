@@ -29,6 +29,7 @@ def load_data(messages_filepath, categories_filepath):
     for column in categories:
         categories[column] = categories[column].str[-1]
         categories[column] = categories[column].astype(int)
+    categories['related'] = categories['related'].map(lambda x: 1 if x==2 else x)
     df = df.drop(['categories'],axis=1)
     df = pd.concat([df, categories],axis=1)
     return df
