@@ -5,6 +5,30 @@ import sqlite3
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+
+    """
+    Load and preprocess data from two CSV files, merging them into a single DataFrame.
+
+    Parameters:
+        messages_filepath (str): Filepath to the CSV file containing message data.
+        categories_filepath (str): Filepath to the CSV file containing category data.
+
+    Returns:
+        pandas.DataFrame: A DataFrame that combines message and category data with proper data preprocessing.
+
+    This function loads data from two separate CSV files, one containing messages and another containing categories.
+    It merges the data on the 'id' column and then performs several preprocessing steps to make the data suitable for analysis:
+
+    1. Split the 'categories' column into separate category columns.
+    2. Extract the category names from the first row of the categories DataFrame.
+    3. Clean and convert the category values to integers.
+    4. Map the 'related' category to ensure it contains only 0 and 1 values.
+    5. Remove the original 'categories' column.
+    6. Concatenate the cleaned category columns with the original message data.
+
+    The resulting DataFrame is a cleaned and structured dataset for further analysis and modeling.
+    """
+    
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = pd.merge(messages, categories, on="id")
@@ -22,12 +46,47 @@ def load_data(messages_filepath, categories_filepath):
     return df
 
 def clean_data(df):
+
+    """
+    Remove duplicate messages from a DataFrame.
+
+    Parameters:
+        df (pandas.DataFrame): The input DataFrame containing message data.
+
+    Returns:
+        pandas.DataFrame: A DataFrame with duplicate messages removed.
+
+    This function takes a DataFrame as input and performs the following steps to clean the data:
+
+    1. Identifies and counts the number of duplicated messages in the 'message' column.
+    2. Drops duplicate messages while keeping only the first occurrence, ensuring unique messages.
+
+    The resulting DataFrame contains a clean and de-duplicated dataset with unique messages.
+
+    """
+    
     df['message'].duplicated().sum()
     df = df.drop_duplicates(subset=['message'], keep='first')
     return df
 
 
 def save_data(df, database_filename):
+
+    """
+    Save a DataFrame to an SQLite database.
+
+    Parameters:
+        df (pandas.DataFrame): The DataFrame to be saved to the database.
+        database_filename (str): The filepath for the SQLite database where the DataFrame will be stored.
+
+    This function saves the provided DataFrame into an SQLite database with the specified filename. The steps include:
+
+    1. Creating an SQLite database engine using the provided filepath.
+    2. Deriving a table name from the database filename (lowercase, without the extension).
+    3. Saving the DataFrame to the database under the derived table name.
+    4. Printing the name of the database table that was created.
+    """
+
     engine = create_engine('sqlite:///' + database_filename)
     table_name = database_filename.split(".")[0].lower()
     df.to_sql(table_name, engine, index=False)  
